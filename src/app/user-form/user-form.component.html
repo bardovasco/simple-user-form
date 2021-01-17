@@ -1,0 +1,45 @@
+<div class="mt-6">
+  <div class="pt-6">
+   <div class="columns is-mobile is-centered">
+     <form #myForm="ngForm" [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+       <!-- Username field -->
+       <div class="field">
+         <label class="label">Username</label>
+         <div class="control">
+           <input class="input"
+           type="text"
+           formControlName="userName"
+           placeholder="exampleUsername99">
+         </div>
+       </div>
+       <!-- Email field -->
+       <div class="field">
+         <label class="label">Email</label>
+         <div class="control">
+           <input class="input"
+             type="email"
+             formControlName="email"
+             placeholder="example@mail.com">
+         </div>
+       </div>
+       <!-- Passphrase field -->
+       <div class="field">
+         <label class="label">Passphrase</label>
+         <div class="control">
+           <input class="input"
+             type="password"
+             formControlName="passPhrase">
+         </div>
+       </div>
+       <!-- Submit button -->
+       <div class="field is-grouped">
+         <div class="control">
+           <button
+             [disabled]=myForm.invalid
+             class="button is-link" type="submit">Submit</button>
+         </div>
+       </div>
+     </form>
+   </div>
+  </div>
+</div>
